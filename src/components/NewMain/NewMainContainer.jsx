@@ -3,10 +3,11 @@ import { connect } from 'react-redux';
 import Cinema from './Cinema';
 import Theatre from './Theatre';
 import Concert from './Concert';
-import Event from './Event';
+import Series from './Series';
+import Museum from './Museum';
+// import Food from './Food';
 import { increment, addComment, removeComment } from '../../store/Main/Actions';
 import { bindActionCreators } from 'redux';
-import HeaderLogin from '../Headers/HeaderLogin';
 import Header from '../Headers/Header';
 import Footer from '../Footer/Footer';
 import AfterHeaderLinks from '../Headers/AfterHeaderLinks';
@@ -15,13 +16,14 @@ class NewMainContainer extends Component {
     render() {
         return (
             <div>
-                {/* <HeaderLogin /> */}
                 <Header />
                 <AfterHeaderLinks />
                 <Cinema cinema={this.props.cinema} />
-                {/* <Theatre theatre={this.props.theatre} />
+                <Theatre theatre={this.props.theatre} />
                 <Concert concert={this.props.concert} />
-                <Event event={this.props.event} /> */}
+                <Series series={this.props.series} />
+                <Museum museum={this.props.museum} />
+                {/* <Food food={this.props.food} /> */}
                 <Footer />
             </div>
         );
@@ -33,7 +35,9 @@ const mapStateToProps = state => {
         cinema: state.newMain,
         theatre: state.newMain,
         concert: state.newMain,
-        event: state.newMain,
+        series: state.newMain,
+        museum: state.newMain,
+        // food: state.newMain
     };
 };
 

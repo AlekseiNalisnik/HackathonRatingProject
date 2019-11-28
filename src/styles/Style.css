@@ -655,17 +655,17 @@ header {
 
 
 
-.cinema, .theatre, .concert, .event {
+.cinema, .theatre, .concert, .event, .series, .museum {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    height: 330px;
-    background: #F3F2FF;
+    height: 360px;
     justify-content: space-evenly;
     position: relative;
+    margin-top: 15px;
 }
   
-.cinema_item, .theatre_item, .concert_item, .event_item {
+.cinema_item, .theatre_item, .concert_item, .series_item, .museum_item {
     text-align: center;
     padding: 10px;
     width: 200px;
@@ -673,7 +673,7 @@ header {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.cinema_item__image, .theatre_item__image, .concert_item__image, .event_item__image {
+.cinema_item__image, .theatre_item__image, .concert_item__image, .series_item__image, .museum_item__image {
     border: 1px solid black;
     margin: 10px;
     width: 175px;
@@ -682,17 +682,17 @@ header {
     margin-bottom: 0;
 }
 
-.cinema_item__name, .theatre_item__name, .concert_item__name, .event_item__name {
+.cinema_item__name, .theatre_item__name, .concert_item__name, .series_item__name, .museum_item__name {
     font-size: 16px;
     font-weight: bold;
     padding: 2px;
 }
 
-.cinema_item__year, .theatre_item__date, .concert_item__date, .theatre_item__date {
+.cinema_item__year, .theatre_item__date, .concert_item__date, .series_item__date, .museum_item__address {
     font-size: 14px;
 }
 
-.cinema_item__rating, .theatre_item__rating, .concert_item__rating, .event_item__rating {
+.cinema_item__rating, .theatre_item__rating, .concert_item__rating, .series_item__rating, .museum_item__rating {
     position: absolute;
     height: 24px;
     width: 35px;
@@ -909,4 +909,51 @@ header {
     right: 2%;
     top: 16px;
     text-decoration: none;
+}
+
+.cinema_title, .theatre_title, .concert_title, .series_title, .museum_title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 40px;
+    color: black;
+    position: absolute;
+    top: -5%;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+.cinema_scene{
+    position: relative;
+}
+
+.button_ahead_cinema{
+    position: absolute;
+    top: 37%;
+    border-radius: 100px;
+    right: 3%;
+}
+
+.button_behind_cinema{
+    position: absolute;
+    top: 20px;
+    border-radius: 100px;
+    top: 37%;
+    left: 4%;
+}
+.button_ahead_cinema img{
+    width: 40px;
+    height: 40px;
+}
+.button_behind_cinema img{
+    width: 40px;
+    height: 40px;
 }

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-const Theatre = (props) => {
+const Food = (props) => {
 
-    const theatreArray = props.theatre[1];
-    const slides = theatreArray.theatre;
+    const foodArray = props.food[5];
+    const slides = foodArray.food;
     const [slideIndex, setSlideIndex] = useState(5);
     const slidesItem = slides.slice(slideIndex - 5, slideIndex);
 
@@ -21,14 +21,14 @@ const Theatre = (props) => {
 
     return (
         <div>
-            <div className="theatre">
-                <div className="theatre_title">Театр</div>
+            <div className="food">
+                <div className="food_title">Сериалы</div>
                     {slidesItem.map((item) => (
-                        <div className="theatre_item" key={item.id}>
-                            <img className="theatre_item__image" src={item.photo} alt={item.name} />
-                            <div className="theatre_item__name">{item.name}</div>
-                            <div className="theatre_item__date">{item.date + ', ' + item.time}</div>
-                            <div className="theatre_item__rating">{item.rating}</div>
+                        <div className="food_item" key={item.id}>
+                            <img className="food_item__image" src={item.photo} alt={item.name} />
+                            <div className="food_item__name">{item.name}</div>
+                            <div className="food_item__year">{item.year + ', ' + item.genre}</div>
+                            <div className="food_item__rating">{item.rating}</div>
                         </div>
                     ))}
                     <button onClick={() => plusSlides(slideIndex + 2)} className="button_ahead_cinema">
@@ -48,4 +48,4 @@ const Theatre = (props) => {
     );
 }
 
-export default Theatre;
+export default Food;
