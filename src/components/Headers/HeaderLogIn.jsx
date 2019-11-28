@@ -16,7 +16,7 @@ export default class HeaderLogIn extends Component {
                 name: "Профиль",
                 to: '/profile',
                 id: 2
-            }, 
+            },
             {
                 name: "Выйти",
                 to: '/',

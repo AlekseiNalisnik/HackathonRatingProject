@@ -61,7 +61,7 @@ export default class Auth extends Component {
         return (
             <div>
                 {this.state.isAuthorized ? (
-                    <Redirect to="/tape" />
+                    <Redirect to="/NewMain" />
                 ) : (
                 <div>
                     <Header />
