@@ -9,7 +9,7 @@ import theatre from '../../../Data/theatre';
 import concert from '../../../Data/concert';
 import series from '../../../Data/series';
 import museum from '../../../Data/museum';
-// import food from '../../../Data/food';
+import food from '../../../Data/food';
 
 const defaultState = [
     cinema,
@@ -17,7 +17,7 @@ const defaultState = [
     concert,
     series,
     museum,
-    // food
+    food
 ];
 
 export const newMainReducer = (state = defaultState, action) => {

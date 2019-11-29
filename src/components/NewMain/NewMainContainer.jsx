@@ -5,7 +5,7 @@ import Theatre from './Theatre';
 import Concert from './Concert';
 import Series from './Series';
 import Museum from './Museum';
-// import Food from './Food';
+import Food from './Food';
 import { increment, addComment, removeComment } from '../../store/Main/Actions';
 import { bindActionCreators } from 'redux';
 import Header from '../Headers/Header';
@@ -23,7 +23,7 @@ class NewMainContainer extends Component {
                 <Concert concert={this.props.concert} />
                 <Series series={this.props.series} />
                 <Museum museum={this.props.museum} />
-                {/* <Food food={this.props.food} /> */}
+                <Food food={this.props.food} />
                 <Footer />
             </div>
         );
@@ -37,7 +37,7 @@ const mapStateToProps = state => {
         concert: state.newMain,
         series: state.newMain,
         museum: state.newMain,
-        // food: state.newMain
+        food: state.newMain
     };
 };
 

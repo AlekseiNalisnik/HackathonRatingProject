@@ -655,17 +655,20 @@ header {
 
 
 
-.cinema, .theatre, .concert, .event, .series, .museum {
+.cinema, .theatre, .concert, .event, .series, .museum, .food {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    height: 360px;
+    height: 375px;
     justify-content: space-evenly;
     position: relative;
-    margin-top: 15px;
+    border-top: 8px inset  rgb(79, 141, 141);
+    margin: 0;
+    padding: 20px;
+    background-color: #ddd9d9a1;
 }
   
-.cinema_item, .theatre_item, .concert_item, .series_item, .museum_item {
+.cinema_item, .theatre_item, .concert_item, .series_item, .museum_item, .food_item {
     text-align: center;
     padding: 10px;
     width: 200px;
@@ -673,30 +676,34 @@ header {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.cinema_item__image, .theatre_item__image, .concert_item__image, .series_item__image, .museum_item__image {
+.cinema_item__image, .theatre_item__image, .concert_item__image, 
+.series_item__image, .museum_item__image, .food_item__image {
     border: 1px solid black;
-    margin: 10px;
+    margin: 12px;
     width: 175px;
     height: 260px;
     border-radius: 10px;
     margin-bottom: 0;
 }
 
-.cinema_item__name, .theatre_item__name, .concert_item__name, .series_item__name, .museum_item__name {
+.cinema_item__name, .theatre_item__name, .concert_item__name, 
+.series_item__name, .museum_item__name, .food_item__name {
     font-size: 16px;
     font-weight: bold;
     padding: 2px;
 }
 
-.cinema_item__year, .theatre_item__date, .concert_item__date, .series_item__date, .museum_item__address {
+.cinema_item__year, .theatre_item__date, .concert_item__date, 
+.series_item__year, .museum_item__address, .food_item__address {
     font-size: 14px;
 }
 
-.cinema_item__rating, .theatre_item__rating, .concert_item__rating, .series_item__rating, .museum_item__rating {
+.cinema_item__rating, .theatre_item__rating, .concert_item__rating, 
+.series_item__rating, .museum_item__rating, .food_item__rating {
     position: absolute;
     height: 24px;
     width: 35px;
-    top: 30px;
+    top: 53px;
     background-color: rgb(55, 177, 55);
     font-size: 17px;
     color: #fff;
@@ -789,17 +796,12 @@ header {
     border: 2px solid #2F4F4F;
     margin-left: 10px;
     border-radius: 10px;
-    color: #2F4F4F;
-    background: #808080;
+    color: rgb(66, 133, 133);
+    background: #D3D3D3;
     font-weight: bold;
-    padding-top: 10px;
     cursor: pointer;
+    padding: 10px;
 }
-
-
-
-
-
 
 .header_sticky {
     position: sticky;
@@ -911,49 +913,50 @@ header {
     text-decoration: none;
 }
 
-.cinema_title, .theatre_title, .concert_title, .series_title, .museum_title {
+.cinema_title, .theatre_title, .concert_title, .series_title, .museum_title, .food_title {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 25px;
     margin-left: 40px;
     color: black;
     position: absolute;
-    top: -5%;
+    top: 0;
     left: 0;
 }
 
-
-
-
-
-
-
-
-
-
-.cinema_scene{
-    position: relative;
-}
-
-.button_ahead_cinema{
+.button_ahead {
+    display: block;
     position: absolute;
-    top: 37%;
-    border-radius: 100px;
-    right: 3%;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 50%;
+    top:37%;
+    right: 4%;
 }
 
-.button_behind_cinema{
+.button_behind {
+    display: block;
     position: absolute;
-    top: 20px;
-    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 50%;
     top: 37%;
-    left: 4%;
+    left: 5%;
 }
-.button_ahead_cinema img{
-    width: 40px;
-    height: 40px;
+
+.button_behind img {
+    transform: scaleX(-1);
 }
-.button_behind_cinema img{
-    width: 40px;
-    height: 40px;
+
+.cinema {
+    border-top: 0;
+}
+
+.link_decorate {
+    text-decoration: none;
+    color: #000;
 }

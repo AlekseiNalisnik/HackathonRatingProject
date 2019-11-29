@@ -5,12 +5,11 @@ import RegContainer from '../Registration/RegContainer';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from '../../store/Reducers';
-import Feed from '../Posts/Feed';
-import Profile from '../Profile/Profile';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import CommentForm from '../Comments/CommentForm';
 
 import NewMainContainer from '../NewMain/NewMainContainer';
+import Single from '../NewMain/Single';
 
 const store = createStore(rootReducer);
 
@@ -18,7 +17,7 @@ class App extends Component {
     render() {
         return (
             <Provider store={store}>
-                <Router>
+                <BrowserRouter>
                     <div>
                         <Route path='/registration' component={RegContainer} exact />
                         <Route path='/' component={AuthContainer} exact />
@@ -26,10 +25,9 @@ class App extends Component {
                         <Route path='/comment' component={CommentForm} exact />
                     </div>
                     <div className="App">
-                        <Route path='/tape' component={Feed} exact />
-                        <Route path='/profile' component={Profile} exact /> 
+                        <Route path='/single/:id' component={Single} exact />
                     </div>
-                </Router>
+                </BrowserRouter>
             </Provider>
         );
     }
