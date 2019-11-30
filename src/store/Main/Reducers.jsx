@@ -1,8 +1,8 @@
-// import {
-//     ADD_COMMENT,
-//     INCREMENT_LIKES,
-//     REMOVE_COMMENT
-// } from './Actions';
+import {
+    ADD_COMMENT,
+    INCREMENT_LIKES,
+    REMOVE_COMMENT
+} from './Actions';
 
 import cinema from '../../../Data/cinema';
 import theatre from '../../../Data/theatre';
@@ -21,16 +21,20 @@ const defaultState = [
 ];
 
 export const newMainReducer = (state = defaultState, action) => {
-    // switch(action.type) {
-    //     case ADD_COMMENT:
-    //         return { ...state, email: action.payload };
-    //     case INCREMENT_LIKES:
-    //         return { ...state, password: action.payload };
-    //     case REMOVE_COMMENT:
-    //         return { ...state, name: action.payload };
-    //     default: 
-    //         return state;
-    // }
+    switch(action.type) {
+        case INCREMENT_LIKES:
+            console.log('INCREMENT_LIKES');
+            console.log('state - ', state);
+            console.log('action - ', action);
+            return state;
+            // return [ ...state, index: action.index ];
+    //     // case ADD_COMMENT:
+    //     //     return { ...state, email: action.payload };
+    //     // case REMOVE_COMMENT:
+    //     //     return { ...state, name: action.payload };
+        default: 
+            return state;
+    }
     console.log('state - ', state);
     console.log('action - ', action);
     return state;

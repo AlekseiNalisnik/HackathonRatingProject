@@ -72,6 +72,7 @@ export default class Reg extends Component {
                 {this.state.isRegistrated ? <Redirect to="/" /> : (
                 <div>
                     <Header />
+                    <div className="auth__outer_block">
                     <div className="reg">
                         <p>Уже зарегистрированы?</p>
                         <Link to='/' className="reg__toAuth">
@@ -132,6 +133,7 @@ export default class Reg extends Component {
                             </div>
                         </form>
                     </div> 
+                    </div>
                 </div>
                 ) }
             </div>

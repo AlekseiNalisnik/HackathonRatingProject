@@ -35,6 +35,7 @@ const AfterHeaderLinks = (props) => {
             <div className="move_to_label">
                 {links.map((item, index) => 
                     <div className="label" key={item.name}>
+                        {console.log('section - ', section)}
                         <Link to={{
                             pathname: `/Pаздел/${item.name}`,
                             state: {

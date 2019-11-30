@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../Headers/Header';
 import { Link } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 
 const FullStateList = (props) => {
 
@@ -12,6 +13,7 @@ const FullStateList = (props) => {
         <div>
             <Header />
             <div className="fullStateList">
+                <div className = "fullStateList__scene_name"> Кино</div>
                 {/* <div className="fullStateList_title">Лидеры проката</div> */}
                 {section.map((item) => (
                     <div className="fullStateList_item" key={item.id}>
@@ -41,6 +43,7 @@ const FullStateList = (props) => {
                     </div>
                 ))}
             </div>
+            <Footer />
         </div>
     )
 };

@@ -5,6 +5,7 @@ import { createIsAuthorizedFlag, getUsersInfo } from '../../service/Service';
 import { userStatus } from '../../../Data/userStatus';
 import { Redirect } from 'react-router';
 import Header from '../Headers/Header';
+import Footer from '../Footer/Footer';
 
 
 export default class Auth extends Component {
@@ -65,6 +66,7 @@ export default class Auth extends Component {
                 ) : (
                 <div>
                     <Header />
+                    <div className="auth__outer_block">
                     <div className="auth">
                         <p>Нет аккаунта?</p>
                         <Link to='/registration' className="auth__toReg">
@@ -102,6 +104,7 @@ export default class Auth extends Component {
                         </form>
                     </div>
                 </div>
+            </div>
                 ) }
             </div>
         );

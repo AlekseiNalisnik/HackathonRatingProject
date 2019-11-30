@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import Cinema from './Cinema';
+import { Cinema } from './Cinema';
 import Theatre from './Theatre';
 import Concert from './Concert';
 import Series from './Series';
@@ -17,7 +17,10 @@ const NewMainContainer = (props) => {
         <div>
             <Header />
             <AfterHeaderLinks section={props.cinema} />
-            <Cinema cinema={props.cinema} />
+            <Cinema 
+                cinema={props.cinema}
+                increment={props.increment}
+            />
             <Theatre theatre={props.theatre} />
             <Concert concert={props.concert} />
             <Series series={props.series} />

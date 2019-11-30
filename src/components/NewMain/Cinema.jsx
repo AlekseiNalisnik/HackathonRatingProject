@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Single from './Single';
 
 const Cinema = (props) => {
 
@@ -7,6 +8,10 @@ const Cinema = (props) => {
     const slides = cinemaArray.cinema;
     const [slideIndex, setSlideIndex] = useState(5);
     const slidesItem = slides.slice(slideIndex - 5, slideIndex);
+    console.log('CINEMA PROPS - ', slidesItem);
+
+    // const increment = props.increment;
+    // console.log('CINEMA increment - ', increment);
 
     const plusSlides = (n) => {
         if(slideIndex < slides.length - 1) {
@@ -29,7 +34,8 @@ const Cinema = (props) => {
                         <Link to={{
                             pathname: `/single/${item.id}`,
                             state: {
-                                linkProps: item
+                                linkProps: item,
+                                rate: item.rating
                             }
                         }} className="link_decorate">
                             <img className="cinema_item__image" src={item.photo} alt={item.name} />
@@ -56,4 +62,4 @@ const Cinema = (props) => {
     );
 }
 
-export default Cinema;
+export { Cinema };
