@@ -10,27 +10,27 @@ import CommentForm from '../Comments/CommentForm';
 
 import NewMainContainer from '../NewMain/NewMainContainer';
 import Single from '../NewMain/Single';
+import FullStateList from '../NewMain/FullStateList';
 
 const store = createStore(rootReducer);
 
-class App extends Component {
-    render() {
-        return (
-            <Provider store={store}>
-                <BrowserRouter>
-                    <div>
-                        <Route path='/registration' component={RegContainer} exact />
-                        <Route path='/' component={AuthContainer} exact />
-                        <Route path='/NewMain' component={NewMainContainer} exact />
-                        <Route path='/comment' component={CommentForm} exact />
-                    </div>
-                    <div className="App">
-                        <Route path='/single/:id' component={Single} exact />
-                    </div>
-                </BrowserRouter>
-            </Provider>
-        );
-    }
+const App = () => {
+    return (
+        <Provider store={store}>
+            <BrowserRouter>
+                <div>
+                    <Route path='/registration' component={RegContainer} exact />
+                    <Route path='/' component={AuthContainer} exact />
+                    <Route path='/NewMain' component={NewMainContainer} exact />
+                    <Route path='/comment' component={CommentForm} exact />
+                </div>
+                <div className="App">
+                    <Route path='/single/:id' component={Single} exact />
+                    <Route path='/Pаздел/:name' component={FullStateList} exact />
+                </div>
+            </BrowserRouter>
+        </Provider>
+    );
 }
 
 export default App;

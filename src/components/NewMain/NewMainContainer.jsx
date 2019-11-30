@@ -12,22 +12,20 @@ import Header from '../Headers/Header';
 import Footer from '../Footer/Footer';
 import AfterHeaderLinks from '../Headers/AfterHeaderLinks';
 
-class NewMainContainer extends Component {
-    render() {
-        return (
-            <div>
-                <Header />
-                <AfterHeaderLinks />
-                <Cinema cinema={this.props.cinema} />
-                <Theatre theatre={this.props.theatre} />
-                <Concert concert={this.props.concert} />
-                <Series series={this.props.series} />
-                <Museum museum={this.props.museum} />
-                <Food food={this.props.food} />
-                <Footer />
-            </div>
-        );
-    }
+const NewMainContainer = (props) => {
+    return (
+        <div>
+            <Header />
+            <AfterHeaderLinks section={props.cinema} />
+            <Cinema cinema={props.cinema} />
+            <Theatre theatre={props.theatre} />
+            <Concert concert={props.concert} />
+            <Series series={props.series} />
+            <Museum museum={props.museum} />
+            <Food food={props.food} />
+            <Footer />
+        </div>
+    );
 }
 
 const mapStateToProps = state => {

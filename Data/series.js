@@ -110,7 +110,7 @@
     },
 
     {
-        photo:url="https://b1.filmpro.ru/c/342027.600xp.jpg",
+        photo:url="https://st.kp.yandex.net/images/film_iphone/iphone360_94249.jpg",
         rating: 0,
         name: 'Братья по оружию',
         year: '2001',

@@ -116,7 +116,7 @@
     },
 
     {
-        photo:url="http://teatrkaluga.ru/files/gallery/31/spk/%D0%B4%D0%B8%D0%BA%D0%B0%D1%80%D1%8C_04.JPGц",
+        photo:url="http://teatrkaluga.ru/files/gallery/31/spk/%D0%B4%D0%B8%D0%BA%D0%B0%D1%80%D1%8C_07.jpg",
         rating: 0,
         name: 'Дикарь',
         date: '2019-12-13',
