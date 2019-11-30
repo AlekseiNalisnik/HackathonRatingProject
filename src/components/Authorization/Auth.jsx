@@ -5,6 +5,7 @@ import { createIsAuthorizedFlag, getUsersInfo } from '../../service/Service';
 import { userStatus } from '../../../Data/userStatus';
 import { Redirect } from 'react-router';
 import Header from '../Headers/Header';
+import HeaderPostLinks from '../Headers/HeaderCOPY';
 import Footer from '../Footer/Footer';
 
 
@@ -65,7 +66,8 @@ export default class Auth extends Component {
                     <Redirect to="/NewMain" />
                 ) : (
                 <div>
-                    <Header />
+                    {/* <Header /> */}
+                    <HeaderPostLinks />
                     <div className="auth__outer_block">
                     <div className="auth">
                         <p>Нет аккаунта?</p>

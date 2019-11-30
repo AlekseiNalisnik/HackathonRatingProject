@@ -4,6 +4,7 @@ import { createUsersInfo } from '../../service/Service';
 import { usersInfo } from '../../../Data/usersInfo';
 import { Redirect } from 'react-router';
 import Header from '../Headers/Header';
+import HeaderPostLinks from '../Headers/HeaderCOPY';
 
 export default class Reg extends Component {
     constructor(props) {
@@ -71,7 +72,8 @@ export default class Reg extends Component {
             <div>
                 {this.state.isRegistrated ? <Redirect to="/" /> : (
                 <div>
-                    <Header />
+                    {/* <Header /> */}
+                    <HeaderPostLinks />
                     <div className="auth__outer_block">
                     <div className="reg">
                         <p>Уже зарегистрированы?</p>

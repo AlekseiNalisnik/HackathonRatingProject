@@ -6,7 +6,7 @@ const Header = () => {
     const exit = () => {
         userStatus[0] = {userStatus: false};
         Array.from(document.getElementsByClassName("clear_input")).forEach((item) => {
-            item.value = ''; 
+            item.value = '';
         });
     };
 

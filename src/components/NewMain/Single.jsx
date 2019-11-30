@@ -55,30 +55,119 @@ const Single = (props) => {
                                         {linkProps.address}
                                     </div> : <div></div>
                                 }
-                                <div className="single__date"> 
-                                    <div className="single__contnet_naming"> Дата: </div>
-                                    {linkProps.date}
-                                </div>
-                                <div className="single__time"> 
-                                    <div className="single__contnet_naming"> Время: </div>
-                                    {linkProps.time}
-                                </div>
-                                <div className="single__country"> 
-                                    <div className="single__contnet_naming"> Страна: </div>
-                                    {}
-                                </div>
-                                <div className="single__starring">
-                                    <div className="single__contnet_naming">В ролях:</div>
-                                    {}
-                                </div>
-                                <div className="single__producer"> 
-                                    <div className="single__contnet_naming">Продюсер:</div>
-                                    {}
-                                </div>
-                                <div className="single__budjet"> 
-                                    <div className="single__contnet_naming">Бюджет:</div>
-                                    {}
-                                </div>
+                                {linkProps.date ? 
+                                    <div className="single__date"> 
+                                        <div className="single__contnet_naming"> Дата: </div>
+                                        {linkProps.date}
+                                    </div> : <div></div>
+                                }
+                                {linkProps.time ? 
+                                    <div className="single__time"> 
+                                        <div className="single__contnet_naming"> Время </div>
+                                        {linkProps.time}
+                                    </div> : <div></div>
+                                }
+                                {linkProps.country ? 
+                                    <div className="single__country"> 
+                                        <div className="single__contnet_naming"> Страна: </div>
+                                        {linkProps.country}
+                                    </div> : <div></div>
+                                }                                
+                                {linkProps.producer ? 
+                                    <div className="single__address"> 
+                                        <div className="single__contnet_naming"> Продюсер: </div>
+                                        {linkProps.producer}
+                                    </div> : <div></div>
+                                }
+                                {linkProps.budget ? 
+                                    <div className="single__address"> 
+                                        <div className="single__contnet_naming"> Бюджет: </div>
+                                        {linkProps.budget}
+                                    </div> : <div></div>
+                                }
+
+                                {linkProps.premiere ? 
+                                    <div className="single__address"> 
+                                        <div className="single__contnet_naming"> Дата премьеры: </div>
+                                        {linkProps.premiere}
+                                    </div> : <div></div>
+                                }
+                                {linkProps.age ? 
+                                    <div className="single__address"> 
+                                        <div className="single__contnet_naming"> Возраст: </div>
+                                        {linkProps.age}
+                                    </div> : <div></div>
+                                }
+                                {linkProps.place ? 
+                                    <div className="single__address"> 
+                                        <div className="single__contnet_naming"> Место: </div>
+                                        {linkProps.place}
+                                    </div> : <div></div>
+                                }
+                                {linkProps.telephone ? 
+                                    <div className="single__address"> 
+                                        <div className="single__contnet_naming"> Телефон: </div>
+                                        {linkProps.telephone}
+                                    </div> : <div></div>
+                                }
+                                {linkProps.site ? 
+                                    <div className="single__address"> 
+                                        <div className="single__contnet_naming"> Сайт: </div>
+                                        {linkProps.site}
+                                    </div> : <div></div>
+                                }
+                                {linkProps.delivery ? 
+                                    <div className="single__address"> 
+                                        <div className="single__contnet_naming"> Доставка: </div>
+                                        {linkProps.delivery}
+                                    </div> : <div></div>
+                                }
+                                {linkProps.bestdish ? 
+                                    <div className="single__address"> 
+                                        <div className="single__contnet_naming"> Лучшее блюдо: </div>
+                                        {linkProps.bestdish}
+                                    </div> : <div></div>
+                                }
+                                {linkProps.timeofwork ? 
+                                    <div className="single__address"> 
+                                        <div className="single__contnet_naming"> Время работы: </div>
+                                        {linkProps.timeofwork}
+                                    </div> : <div></div>
+                                }
+                                {linkProps.tickets ? 
+                                    <div className="single__address"> 
+                                        <div className="single__contnet_naming"> Билеты: </div>
+                                        {linkProps.tickets}
+                                    </div> : <div></div>
+                                }
+                                {linkProps.infforinv ? 
+                                    <div className="single__address"> 
+                                        <div className="single__contnet_naming"> Вход для инвалидов: </div>
+                                        {linkProps.infforinv}
+                                    </div> : <div></div>
+                                }
+                                {linkProps.director ? 
+                                    <div className="single__address"> 
+                                        <div className="single__contnet_naming"> Режиссер: </div>
+                                        {linkProps.director}
+                                    </div> : <div></div>
+                                }
+                                {linkProps.duration ? 
+                                    <div className="single__address"> 
+                                        <div className="single__contnet_naming"> Длительность: </div>
+                                        {linkProps.duration}
+                                    </div> : <div></div>
+                                }
+                                {linkProps.intermission ? 
+                                    <div className="single__address"> 
+                                        <div className="single__contnet_naming"> Антракт: </div>
+                                        {linkProps.intermission}
+                                    </div> : <div></div>
+                                }
+
+
+
+
 
                                 <div className="single__contnet_press_star"> Поставьте оценку</div>
                 
@@ -108,7 +197,21 @@ const Single = (props) => {
                                 </fieldset>
                             </div>
                         </div>
-                        <div className="single__description"> <div className="single__contnet_naming_description"> Описание: </div>{linkProps.description}</div>
+                        <div className="single__description">
+                             <div className="single__contnet_naming_description">
+                             Описание: 
+                            </div>{linkProps.description}
+                        </div>
+
+                        <div className="single__comments_section">
+                            <div className="single__comments_section_name" >Комментарии:</div>
+                            <div className="single__comments_person">
+                                <div className="single__comments_person_img"><img src="http://www.pngmart.com/files/10/User-Account-Person-PNG-File.png" alt="personpic"/>
+                                <div className="single__comments_person_nickname">Nikikwiki</div>
+                            </div>
+                                <div className="single__comments_person_comment">Комментарий будет где-то здесь</div>
+                            </div>
+                        </div>
                     </div>
                     <Footer />
                 </div>
