@@ -10,9 +10,6 @@ const Cinema = (props) => {
     const slidesItem = slides.slice(slideIndex - 5, slideIndex);
     console.log('CINEMA PROPS - ', slidesItem);
 
-    // const increment = props.increment;
-    // console.log('CINEMA increment - ', increment);
-
     const plusSlides = (n) => {
         if(slideIndex < slides.length - 1) {
             setSlideIndex(n);

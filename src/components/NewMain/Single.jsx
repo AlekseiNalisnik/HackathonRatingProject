@@ -10,9 +10,34 @@ const Single = (props) => {
     console.log('Single linkProps - ', linkProps);
     console.log('Single rate - ', rate);
 
-    const handleClick = (event) => {
-        event.preventDefault();
-        console.log('handleClick');
+    const handleClick1 = (event) => {
+        // event.preventDefault();
+        linkProps.rating=1;
+        console.log('handleClick rating - ', linkProps.rating);
+    };
+
+    const handleClick2 = (event) => {
+        // event.preventDefault();  
+        linkProps.rating=2;
+        console.log('handleClick rating - ', linkProps.rating);
+    };
+
+    const handleClick3 = (event) => {
+        // event.preventDefault();
+        linkProps.rating=3;
+        console.log('handleClick rating - ', linkProps.rating);
+    };
+
+    const handleClick4 = (event) => {
+        // event.preventDefault();
+        linkProps.rating=4;
+        console.log('handleClick rating - ', linkProps.rating);
+    };
+
+    const handleClick5 = (event) => {
+        // event.preventDefault();
+        linkProps.rating=5;
+        console.log('handleClick rating - ', linkProps.rating);
     };
 
     return (
@@ -175,23 +200,23 @@ const Single = (props) => {
                             <div className="rating__field_block">
                                 <fieldset className="rating__field_field">
                                     <input type="radio" id="star5" name="rating" value="5" />
-                                        <label htmlFor="star5" title="Rocks!" onClick={handleClick}>
+                                        <label htmlFor="star5" title="Rocks!" onClick={handleClick5}>
                                             stars
                                         </label>
                                     <input type="radio" id="star4" name="rating" value="4" />
-                                        <label htmlFor="star4" title="Pretty good" onClick={handleClick}>
+                                        <label htmlFor="star4" title="Pretty good" onClick={handleClick4}>
                                             stars
                                         </label>
                                     <input type="radio" id="star3" name="rating" value="3" />
-                                        <label htmlFor="star3" title="Meh" onClick={handleClick}>
+                                        <label htmlFor="star3" title="Meh" onClick={handleClick3}>
                                             stars
                                         </label>
                                     <input type="radio" id="star2" name="rating" value="2" />
-                                        <label htmlFor="star2" title="Kinda bad" onClick={handleClick}>
+                                        <label htmlFor="star2" title="Kinda bad" onClick={handleClick2}>
                                             stars
                                         </label>
                                     <input type="radio" id="star1" name="rating" value="1" />
-                                        <label htmlFor="star1" title="Sucks big time" onClick={handleClick}>
+                                        <label htmlFor="star1" title="Sucks big time" onClick={handleClick1}>
                                             star
                                         </label>
                                 </fieldset>
@@ -209,7 +234,7 @@ const Single = (props) => {
                                 <div className="single__comments_person_img"><img src="http://www.pngmart.com/files/10/User-Account-Person-PNG-File.png" alt="personpic"/>
                                 <div className="single__comments_person_nickname">Nikikwiki</div>
                             </div>
-                                <div className="single__comments_person_comment">Комментарий будет где-то здесь</div>
+                                <div className="single__comments_person_comment">Комментарий...</div>
                             </div>
                         </div>
                     </div>

@@ -13,8 +13,15 @@ const FullStateList = (props) => {
         <div>
             <Header />
             <div className="fullStateList">
-                <div className = "fullStateList__scene_name"> Кино</div>
-                {/* <div className="fullStateList_title">Лидеры проката</div> */}
+                {linkProps[point.point].map(item => item.classiffication == 'cinema' ? 
+                                                        <div className = "fullStateList__scene_name"> Кино</div>                
+                    : item.classiffication == 'theatre' ? <div className = "fullStateList__scene_name"> Театры</div>
+                    : item.classiffication == 'concert' ? <div className = "fullStateList__scene_name"> Концерты</div>
+                    : item.classiffication == 'museum' ? <div className = "fullStateList__scene_name"> Музеи</div>
+                    : item.classiffication == 'series' ? <div className = "fullStateList__scene_name"> Сериалы</div>
+                    : item.classiffication == 'food' ? <div className = "fullStateList__scene_name"> Кафе</div> 
+                    : <div></div>)
+                }
                 {section.map((item) => (
                     <div className="fullStateList_item" key={item.id}>
                         <Link to={{
